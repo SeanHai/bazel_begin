@@ -1,4 +1,4 @@
-load("@rules_cc//cc:defs.bzl", "cc_library", "cc_test")
+#load("@rules_cc//cc:defs.bzl", "cc_library", "cc_test")
 
 package(default_visibility = ["//visibility:public"])
 
@@ -12,7 +12,7 @@ cc_test(
     srcs = ["hello_test.cc"],
     deps = [
 	":hello",
-	"@gtest//:gtest",
-        "@gtest//:gtest_main"	    
+#	"//external:gtest",
+        "@com_google_googletest//:gtest_main",
     ],
 )
